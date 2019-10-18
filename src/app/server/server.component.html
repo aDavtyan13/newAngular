@@ -1,0 +1,31 @@
+<input type="text" [(ngModel)]="serverName">
+<p *ngIf="serverCreated;else elseBlock">{{serverCreatedStatus}}</p>
+<ng-template #elseBlock>
+    <p>No Server was created.</p>
+</ng-template>
+
+<button (click)="buttonClick()">Button</button> 
+
+<app-serverik *ngFor="let dam of servers"></app-serverik>
+
+<!-- <p>Students Name list</p>
+
+<p *ngFor = "let intern of interns">
+    {{intern.name}}
+</p>
+
+<br>
+
+<p>Students Surname list</p>
+
+<p *ngFor="let sur of interns">
+    {{sur.surname}}
+
+</p>
+
+<p>Students University list</p>
+
+<p *ngFor="let uni of interns">
+    {{uni.university}}
+
+</p> -->
